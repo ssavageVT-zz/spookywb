@@ -4,6 +4,11 @@ body {
     color: #333;
 }
 
+@font-face {
+    font-family: 'Halls';
+    src: url('content/Halls.ttf') format('truetype');
+}
+
 /* ==========================================================================
 Hide ng-cloak on page load, https://docs.angularjs.org/api/ng/directive/ngCloak
 ========================================================================== */
@@ -11,11 +16,34 @@ Hide ng-cloak on page load, https://docs.angularjs.org/api/ng/directive/ngCloak
     display: none !important;
 }
 
+.whiteboard-header {
+    font-family: "Halls";
+}
+
+.whiteboard .row  {
+    margin-bottom: 30px;
+}
+
+.whiteboard .row:last-child  {
+    margin-bottom: 0px;
+}
+
+.bricks .brick {
+    min-height: 200px;
+}
+
+.brick {
+    border: solid 1px #ccc;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
 /* ==========================================================================
 Developement Ribbon
 ========================================================================== */
 .ribbon {
-    background-color: #a00;
+    background-color: #ff7619;
     box-shadow: 0 0 10px #888;
     left: -3.5em;
     moz-box-shadow: 0 0 10px #888;

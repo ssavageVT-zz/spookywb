@@ -12,6 +12,18 @@
         <dd>
             <span>{{vm.spookyMonster.monsterType}}</span>
         </dd>
+        <dt><span>Current Status</span></dt>
+        <dd>
+            <span>{{vm.spookyMonster.currentStatus}}</span>
+        </dd>
+        <dt><span>Is In Bathroom</span></dt>
+        <dd>
+            <span>{{vm.spookyMonster.isInBathroom}}</span>
+        </dd>
+        <dt><span>Is Late</span></dt>
+        <dd>
+            <span>{{vm.spookyMonster.isLate}}</span>
+        </dd>
         <dt><span>Whiteboard</span></dt>
         <dd>
             <a ui-sref="whiteboard-detail({id:vm.spookyMonster.whiteboardId})">{{vm.spookyMonster.whiteboardId}}</a>

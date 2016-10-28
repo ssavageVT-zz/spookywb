@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('savickApp')
+        .module('spookywhiteboardApp')
         .controller('UserManagementDeleteController', UserManagementDeleteController);
 
     UserManagementDeleteController.$inject = ['$uibModalInstance', 'entity', 'User'];

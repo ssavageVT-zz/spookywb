@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('savickApp')
+        .module('spookywhiteboardApp')
         .config(stateConfig);
 
     stateConfig.$inject = ['$stateProvider'];
@@ -95,9 +95,7 @@
                     resolve: {
                         entity: function () {
                             return {
-                                currentStatus: null,
-                                isInBathroom: null,
-                                isLate: null,
+                                whiteboardName: null,
                                 id: null
                             };
                         }

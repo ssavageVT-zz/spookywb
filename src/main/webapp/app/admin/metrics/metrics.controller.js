@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('savickApp')
+        .module('spookywhiteboardApp')
         .controller('JhiMetricsMonitoringController', JhiMetricsMonitoringController);
 
     JhiMetricsMonitoringController.$inject = ['$scope','JhiMetricsService', '$uibModal'];

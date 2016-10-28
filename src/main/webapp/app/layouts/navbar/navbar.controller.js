@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('savickApp')
+        .module('spookywhiteboardApp')
         .controller('NavbarController', NavbarController);
 
     NavbarController.$inject = ['$state', 'Auth', 'Principal', 'ProfileService', 'LoginService'];

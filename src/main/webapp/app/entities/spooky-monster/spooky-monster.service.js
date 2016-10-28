@@ -1,7 +1,7 @@
 (function() {
     'use strict';
     angular
-        .module('savickApp')
+        .module('spookywhiteboardApp')
         .factory('SpookyMonster', SpookyMonster);
 
     SpookyMonster.$inject = ['$resource'];

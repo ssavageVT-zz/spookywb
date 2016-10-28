@@ -10,10 +10,10 @@
     </parent>
 
     <groupId>com.spooky</groupId>
-    <artifactId>savick</artifactId>
+    <artifactId>spookywhiteboard</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>war</packaging>
-    <name>Savick</name>
+    <name>Spookywhiteboard</name>
 
     <prerequisites>
         <maven>3.0.0</maven>
@@ -542,9 +542,9 @@
                     <changeLogFile>src/main/resources/config/liquibase/master.xml</changeLogFile>
                     <diffChangeLogFile>src/main/resources/config/liquibase/changelog/${maven.build.timestamp}_changelog.xml</diffChangeLogFile>
                     <driver>org.h2.Driver</driver>
-                    <url>jdbc:h2:file:./target/h2db/db/savick</url>
+                    <url>jdbc:h2:file:./target/h2db/db/spookywhiteboard</url>
                     <defaultSchemaName></defaultSchemaName>
-                    <username>savick</username>
+                    <username>spookywhiteboard</username>
                     <password></password>
                     <referenceUrl>hibernate:spring:com.spooky.domain?dialect=org.hibernate.dialect.H2Dialect&amp;hibernate.ejb.naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringNamingStrategy</referenceUrl>
                     <verbose>true</verbose>
@@ -584,7 +584,7 @@
                 <artifactId>docker-maven-plugin</artifactId>
                 <version>0.4.10</version>
                 <configuration>
-                    <imageName>savick</imageName>
+                    <imageName>spookywhiteboard</imageName>
                     <dockerDirectory>src/main/docker</dockerDirectory>
                     <resources>
                         <resource>

@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('savickApp')
+        .module('spookywhiteboardApp')
         .controller('SettingsController', SettingsController);
 
     SettingsController.$inject = ['Principal', 'Auth'];

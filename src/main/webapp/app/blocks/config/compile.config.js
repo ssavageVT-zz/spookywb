@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('savickApp')
+        .module('spookywhiteboardApp')
         .config(compileServiceConfig);
 
     compileServiceConfig.$inject = ['$compileProvider','DEBUG_INFO_ENABLED'];

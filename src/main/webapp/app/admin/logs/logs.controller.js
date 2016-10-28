@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('savickApp')
+        .module('spookywhiteboardApp')
         .controller('LogsController', LogsController);
 
     LogsController.$inject = ['LogsService'];

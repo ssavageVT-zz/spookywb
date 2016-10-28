@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('savickApp')
+        .module('spookywhiteboardApp')
         .factory('DataUtils', DataUtils);
 
     DataUtils.$inject = ['$window'];

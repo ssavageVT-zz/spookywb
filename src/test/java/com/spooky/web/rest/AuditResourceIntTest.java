@@ -1,6 +1,6 @@
 package com.spooky.web.rest;
 
-import com.spooky.SavickApp;
+import com.spooky.SpookywhiteboardApp;
 import com.spooky.config.audit.AuditEventConverter;
 import com.spooky.domain.PersistentAuditEvent;
 import com.spooky.repository.PersistenceAuditEventRepository;
@@ -31,7 +31,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  *
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = SavickApp.class)
+@SpringBootTest(classes = SpookywhiteboardApp.class)
 @Transactional
 public class AuditResourceIntTest {
 

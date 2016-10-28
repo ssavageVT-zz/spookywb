@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('savickApp')
+        .module('spookywhiteboardApp')
         .controller('SpookyMonsterDeleteController',SpookyMonsterDeleteController);
 
     SpookyMonsterDeleteController.$inject = ['$uibModalInstance', 'entity', 'SpookyMonster'];

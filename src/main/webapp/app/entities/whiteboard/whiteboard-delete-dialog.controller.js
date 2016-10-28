@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('savickApp')
+        .module('spookywhiteboardApp')
         .controller('WhiteboardDeleteController',WhiteboardDeleteController);
 
     WhiteboardDeleteController.$inject = ['$uibModalInstance', 'entity', 'Whiteboard'];

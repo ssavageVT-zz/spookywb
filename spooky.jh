@@ -1,13 +1,13 @@
 entity Whiteboard {
-	currentStatus String,
-    isInBathroom Boolean,
-    isLate Boolean
+	whiteboardName String
 }
 
 entity SpookyMonster {
 	monsterName String,
     monsterType MonsterType
-    
+    currentStatus String,
+    isInBathroom Boolean,
+    isLate Boolean
 }
 
 enum MonsterType {

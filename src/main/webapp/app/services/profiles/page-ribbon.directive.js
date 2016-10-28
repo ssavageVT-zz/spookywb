@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('savickApp')
+        .module('spookywhiteboardApp')
         .directive('pageRibbon', pageRibbon);
 
     pageRibbon.$inject = ['ProfileService', '$rootScope'];

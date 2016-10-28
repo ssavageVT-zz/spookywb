@@ -1,16 +1,16 @@
 version: '2'
 services:
-    savick-app:
-        image: savick
+    spookywhiteboard-app:
+        image: spookywhiteboard
         external_links:
-            - savick-mysql:mysql
+            - spookywhiteboard-mysql:mysql
         environment:
             - SPRING_PROFILES_ACTIVE=prod,swagger
-            - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/savick?useUnicode=true&characterEncoding=utf8&useSSL=false
+            - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/spookywhiteboard?useUnicode=true&characterEncoding=utf8&useSSL=false
             - JHIPSTER_SLEEP=10 # gives time for the database to boot before the application
         ports:
             - 8080:8080
-    savick-mysql:
+    spookywhiteboard-mysql:
         extends:
             file: mysql.yml
-            service: savick-mysql
+            service: spookywhiteboard-mysql

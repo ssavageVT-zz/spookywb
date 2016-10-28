@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('savickApp')
+        .module('spookywhiteboardApp')
         .controller('HomeController', HomeController);
 
     HomeController.$inject = ['$scope', 'Principal', 'LoginService', '$state'];

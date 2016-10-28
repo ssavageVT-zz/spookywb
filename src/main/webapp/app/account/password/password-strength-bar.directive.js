@@ -3,7 +3,7 @@
     'use strict';
 
     angular
-        .module('savickApp')
+        .module('spookywhiteboardApp')
         .directive('passwordStrengthBar', passwordStrengthBar);
 
     function passwordStrengthBar () {

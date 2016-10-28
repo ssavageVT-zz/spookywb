@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('savickApp')
+        .module('spookywhiteboardApp')
         .factory('JhiHealthService', JhiHealthService);
 
     JhiHealthService.$inject = ['$rootScope', '$http'];

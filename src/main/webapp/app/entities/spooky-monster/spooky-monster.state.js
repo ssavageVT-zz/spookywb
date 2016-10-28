@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('savickApp')
+        .module('spookywhiteboardApp')
         .config(stateConfig);
 
     stateConfig.$inject = ['$stateProvider'];
@@ -97,6 +97,9 @@
                             return {
                                 monsterName: null,
                                 monsterType: null,
+                                currentStatus: null,
+                                isInBathroom: null,
+                                isLate: null,
                                 id: null
                             };
                         }

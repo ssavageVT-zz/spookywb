@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('savickApp')
+        .module('spookywhiteboardApp')
         .factory('DateUtils', DateUtils);
 
     DateUtils.$inject = ['$filter'];

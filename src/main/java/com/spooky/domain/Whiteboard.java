@@ -21,14 +21,8 @@ public class Whiteboard implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Column(name = "current_status")
-    private String currentStatus;
-
-    @Column(name = "is_in_bathroom")
-    private Boolean isInBathroom;
-
-    @Column(name = "is_late")
-    private Boolean isLate;
+    @Column(name = "whiteboard_name")
+    private String whiteboardName;
 
     @OneToMany(mappedBy = "whiteboard")
     @JsonIgnore
@@ -42,43 +36,17 @@ public class Whiteboard implements Serializable {
         this.id = id;
     }
 
-    public String getCurrentStatus() {
-        return currentStatus;
+    public String getWhiteboardName() {
+        return whiteboardName;
     }
 
-    public Whiteboard currentStatus(String currentStatus) {
-        this.currentStatus = currentStatus;
+    public Whiteboard whiteboardName(String whiteboardName) {
+        this.whiteboardName = whiteboardName;
         return this;
     }
 
-    public void setCurrentStatus(String currentStatus) {
-        this.currentStatus = currentStatus;
-    }
-
-    public Boolean isIsInBathroom() {
-        return isInBathroom;
-    }
-
-    public Whiteboard isInBathroom(Boolean isInBathroom) {
-        this.isInBathroom = isInBathroom;
-        return this;
-    }
-
-    public void setIsInBathroom(Boolean isInBathroom) {
-        this.isInBathroom = isInBathroom;
-    }
-
-    public Boolean isIsLate() {
-        return isLate;
-    }
-
-    public Whiteboard isLate(Boolean isLate) {
-        this.isLate = isLate;
-        return this;
-    }
-
-    public void setIsLate(Boolean isLate) {
-        this.isLate = isLate;
+    public void setWhiteboardName(String whiteboardName) {
+        this.whiteboardName = whiteboardName;
     }
 
     public Set<SpookyMonster> getSpookyMonsters() {
@@ -130,9 +98,7 @@ public class Whiteboard implements Serializable {
     public String toString() {
         return "Whiteboard{" +
             "id=" + id +
-            ", currentStatus='" + currentStatus + "'" +
-            ", isInBathroom='" + isInBathroom + "'" +
-            ", isLate='" + isLate + "'" +
+            ", whiteboardName='" + whiteboardName + "'" +
             '}';
     }
 }

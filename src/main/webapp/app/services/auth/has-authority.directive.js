@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('savickApp')
+        .module('spookywhiteboardApp')
         .directive('hasAuthority', hasAuthority);
 
     hasAuthority.$inject = ['Principal'];

@@ -1,6 +1,6 @@
 package com.spooky.web.rest;
 
-import com.spooky.SavickApp;
+import com.spooky.SpookywhiteboardApp;
 
 import com.spooky.domain.SpookyMonster;
 import com.spooky.repository.SpookyMonsterRepository;
@@ -39,7 +39,7 @@ import com.spooky.domain.enumeration.MonsterType;
  */
 @RunWith(SpringRunner.class)
 
-@SpringBootTest(classes = SavickApp.class)
+@SpringBootTest(classes = SpookywhiteboardApp.class)
 
 public class SpookyMonsterResourceIntTest {
     private static final String DEFAULT_MONSTER_NAME = "AAAAA";
@@ -47,6 +47,14 @@ public class SpookyMonsterResourceIntTest {
 
     private static final MonsterType DEFAULT_MONSTER_TYPE = MonsterType.GHOST;
     private static final MonsterType UPDATED_MONSTER_TYPE = MonsterType.GOBLIN;
+    private static final String DEFAULT_CURRENT_STATUS = "AAAAA";
+    private static final String UPDATED_CURRENT_STATUS = "BBBBB";
+
+    private static final Boolean DEFAULT_IS_IN_BATHROOM = false;
+    private static final Boolean UPDATED_IS_IN_BATHROOM = true;
+
+    private static final Boolean DEFAULT_IS_LATE = false;
+    private static final Boolean UPDATED_IS_LATE = true;
 
     @Inject
     private SpookyMonsterRepository spookyMonsterRepository;
@@ -87,7 +95,10 @@ public class SpookyMonsterResourceIntTest {
     public static SpookyMonster createEntity(EntityManager em) {
         SpookyMonster spookyMonster = new SpookyMonster()
                 .monsterName(DEFAULT_MONSTER_NAME)
-                .monsterType(DEFAULT_MONSTER_TYPE);
+                .monsterType(DEFAULT_MONSTER_TYPE)
+                .currentStatus(DEFAULT_CURRENT_STATUS)
+                .isInBathroom(DEFAULT_IS_IN_BATHROOM)
+                .isLate(DEFAULT_IS_LATE);
         return spookyMonster;
     }
 
@@ -115,6 +126,9 @@ public class SpookyMonsterResourceIntTest {
         SpookyMonster testSpookyMonster = spookyMonsters.get(spookyMonsters.size() - 1);
         assertThat(testSpookyMonster.getMonsterName()).isEqualTo(DEFAULT_MONSTER_NAME);
         assertThat(testSpookyMonster.getMonsterType()).isEqualTo(DEFAULT_MONSTER_TYPE);
+        assertThat(testSpookyMonster.getCurrentStatus()).isEqualTo(DEFAULT_CURRENT_STATUS);
+        assertThat(testSpookyMonster.isIsInBathroom()).isEqualTo(DEFAULT_IS_IN_BATHROOM);
+        assertThat(testSpookyMonster.isIsLate()).isEqualTo(DEFAULT_IS_LATE);
     }
 
     @Test
@@ -129,7 +143,10 @@ public class SpookyMonsterResourceIntTest {
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
                 .andExpect(jsonPath("$.[*].id").value(hasItem(spookyMonster.getId().intValue())))
                 .andExpect(jsonPath("$.[*].monsterName").value(hasItem(DEFAULT_MONSTER_NAME.toString())))
-                .andExpect(jsonPath("$.[*].monsterType").value(hasItem(DEFAULT_MONSTER_TYPE.toString())));
+                .andExpect(jsonPath("$.[*].monsterType").value(hasItem(DEFAULT_MONSTER_TYPE.toString())))
+                .andExpect(jsonPath("$.[*].currentStatus").value(hasItem(DEFAULT_CURRENT_STATUS.toString())))
+                .andExpect(jsonPath("$.[*].isInBathroom").value(hasItem(DEFAULT_IS_IN_BATHROOM.booleanValue())))
+                .andExpect(jsonPath("$.[*].isLate").value(hasItem(DEFAULT_IS_LATE.booleanValue())));
     }
 
     @Test
@@ -144,7 +161,10 @@ public class SpookyMonsterResourceIntTest {
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
             .andExpect(jsonPath("$.id").value(spookyMonster.getId().intValue()))
             .andExpect(jsonPath("$.monsterName").value(DEFAULT_MONSTER_NAME.toString()))
-            .andExpect(jsonPath("$.monsterType").value(DEFAULT_MONSTER_TYPE.toString()));
+            .andExpect(jsonPath("$.monsterType").value(DEFAULT_MONSTER_TYPE.toString()))
+            .andExpect(jsonPath("$.currentStatus").value(DEFAULT_CURRENT_STATUS.toString()))
+            .andExpect(jsonPath("$.isInBathroom").value(DEFAULT_IS_IN_BATHROOM.booleanValue()))
+            .andExpect(jsonPath("$.isLate").value(DEFAULT_IS_LATE.booleanValue()));
     }
 
     @Test
@@ -166,7 +186,10 @@ public class SpookyMonsterResourceIntTest {
         SpookyMonster updatedSpookyMonster = spookyMonsterRepository.findOne(spookyMonster.getId());
         updatedSpookyMonster
                 .monsterName(UPDATED_MONSTER_NAME)
-                .monsterType(UPDATED_MONSTER_TYPE);
+                .monsterType(UPDATED_MONSTER_TYPE)
+                .currentStatus(UPDATED_CURRENT_STATUS)
+                .isInBathroom(UPDATED_IS_IN_BATHROOM)
+                .isLate(UPDATED_IS_LATE);
         SpookyMonsterDTO spookyMonsterDTO = spookyMonsterMapper.spookyMonsterToSpookyMonsterDTO(updatedSpookyMonster);
 
         restSpookyMonsterMockMvc.perform(put("/api/spooky-monsters")
@@ -180,6 +203,9 @@ public class SpookyMonsterResourceIntTest {
         SpookyMonster testSpookyMonster = spookyMonsters.get(spookyMonsters.size() - 1);
         assertThat(testSpookyMonster.getMonsterName()).isEqualTo(UPDATED_MONSTER_NAME);
         assertThat(testSpookyMonster.getMonsterType()).isEqualTo(UPDATED_MONSTER_TYPE);
+        assertThat(testSpookyMonster.getCurrentStatus()).isEqualTo(UPDATED_CURRENT_STATUS);
+        assertThat(testSpookyMonster.isIsInBathroom()).isEqualTo(UPDATED_IS_IN_BATHROOM);
+        assertThat(testSpookyMonster.isIsLate()).isEqualTo(UPDATED_IS_LATE);
     }
 
     @Test

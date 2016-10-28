@@ -1,7 +1,7 @@
 {
   "generator-jhipster": {
     "jhipsterVersion": "3.7.0",
-    "baseName": "savick",
+    "baseName": "spookywhiteboard",
     "packageName": "com.spooky",
     "packageFolder": "com/spooky",
     "serverPort": "8080",
@@ -15,7 +15,7 @@
     "searchEngine": "no",
     "buildTool": "maven",
     "enableSocialSignIn": false,
-    "rememberMeKey": "8a67f2cd16fce4286b0ed5615b9c10a974a0fdb3",
+    "rememberMeKey": "adefc21db4826f340874647612f77e466f774456",
     "useSass": false,
     "applicationType": "monolith",
     "testFrameworks": [

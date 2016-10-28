@@ -16,7 +16,7 @@
     <!--
         Added the entity SpookyMonster.
     -->
-    <changeSet id="20161028152603-1" author="jhipster">
+    <changeSet id="20161028155015-1" author="jhipster">
         <createTable tableName="spooky_monster">
             <column name="id" type="bigint" autoIncrement="${autoIncrement}">
                 <constraints primaryKey="true" nullable="false"/>
@@ -26,6 +26,18 @@
             </column>
             
             <column name="monster_type" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="current_status" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="is_in_bathroom" type="bit">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="is_late" type="bit">
                 <constraints nullable="true" />
             </column>
             

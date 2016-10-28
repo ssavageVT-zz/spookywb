@@ -15,6 +15,6 @@
     };
 
     angular
-        .module('savickApp')
+        .module('spookywhiteboardApp')
         .component('jhiItemCount', jhiItemCount);
 })();

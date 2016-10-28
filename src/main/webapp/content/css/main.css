@@ -78,6 +78,21 @@ Hide ng-cloak on page load, https://docs.angularjs.org/api/ng/directive/ngCloak
     display: none;
 }
 
+.status {
+    font-family: 'Creepster', cursive;
+    position: relative;
+    padding-left: 32px;
+    padding-top: 3px;
+    letter-spacing: 1px;
+    font-size: 16px;
+}
+
+.status img {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 /* ==========================================================================
 Developement Ribbon
 ========================================================================== */

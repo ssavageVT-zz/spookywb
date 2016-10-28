@@ -1,6 +1,6 @@
 package com.spooky.web.rest;
 
-import com.spooky.SavickApp;
+import com.spooky.SpookywhiteboardApp;
 import com.spooky.domain.Authority;
 import com.spooky.domain.User;
 import com.spooky.repository.AuthorityRepository;
@@ -41,7 +41,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * @see UserService
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = SavickApp.class)
+@SpringBootTest(classes = SpookywhiteboardApp.class)
 public class AccountResourceIntTest {
 
     @Inject

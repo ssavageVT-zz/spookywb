@@ -11,7 +11,7 @@
     };
 
     angular
-        .module('savickApp')
+        .module('spookywhiteboardApp')
         .component('jhiAlert', jhiAlert);
 
     jhiAlertController.$inject = ['$scope', 'AlertService'];

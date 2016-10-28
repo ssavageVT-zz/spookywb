@@ -21,6 +21,9 @@
                     <th jh-sort-by="id"><span>ID</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th jh-sort-by="monsterName"><span>Monster Name</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th jh-sort-by="monsterType"><span>Monster Type</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="currentStatus"><span>Current Status</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="isInBathroom"><span>Is In Bathroom</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="isLate"><span>Is Late</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th jh-sort-by="whiteboardId"><span>Whiteboard</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th></th>
                 </tr>
@@ -30,6 +33,9 @@
                     <td><a ui-sref="spooky-monster-detail({id:spookyMonster.id})">{{spookyMonster.id}}</a></td>
                     <td>{{spookyMonster.monsterName}}</td>
                     <td>{{spookyMonster.monsterType}}</td>
+                    <td>{{spookyMonster.currentStatus}}</td>
+                    <td>{{spookyMonster.isInBathroom}}</td>
+                    <td>{{spookyMonster.isLate}}</td>
                     <td>
                         <a ui-sref="whiteboard-detail({id:spookyMonster.whiteboardId})">{{spookyMonster.whiteboardId}}</a>
                     </td>

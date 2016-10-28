@@ -1,7 +1,7 @@
 version: '2'
 services:
-    savick-sonar:
-        container_name: savick-sonar
+    spookywhiteboard-sonar:
+        container_name: spookywhiteboard-sonar
         image: sonarqube:5.6.1-alpine
         ports:
             - 9000:9000

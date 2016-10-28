@@ -1,7 +1,7 @@
 {
-  "name": "savick",
+  "name": "spookywhiteboard",
   "version": "0.0.0",
-  "description": "Description for savick",
+  "description": "Description for spookywhiteboard",
   "private": true,
   "cacheDirectories": [
     "node_modules",

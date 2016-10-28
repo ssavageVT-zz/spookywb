@@ -17,9 +17,21 @@
             "fieldName": "monsterType",
             "fieldType": "MonsterType",
             "fieldValues": "GHOST,GOBLIN,ZOMBIE,VAMPIRE,SKELLINGTON"
+        },
+        {
+            "fieldName": "currentStatus",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "isInBathroom",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "isLate",
+            "fieldType": "Boolean"
         }
     ],
-    "changelogDate": "20161028152603",
+    "changelogDate": "20161028155015",
     "entityTableName": "spooky_monster",
     "dto": "mapstruct",
     "pagination": "infinite-scroll",

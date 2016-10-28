@@ -13,11 +13,7 @@ public class WhiteboardDTO implements Serializable {
 
     private Long id;
 
-    private String currentStatus;
-
-    private Boolean isInBathroom;
-
-    private Boolean isLate;
+    private String whiteboardName;
 
 
     public Long getId() {
@@ -27,26 +23,12 @@ public class WhiteboardDTO implements Serializable {
     public void setId(Long id) {
         this.id = id;
     }
-    public String getCurrentStatus() {
-        return currentStatus;
+    public String getWhiteboardName() {
+        return whiteboardName;
     }
 
-    public void setCurrentStatus(String currentStatus) {
-        this.currentStatus = currentStatus;
-    }
-    public Boolean getIsInBathroom() {
-        return isInBathroom;
-    }
-
-    public void setIsInBathroom(Boolean isInBathroom) {
-        this.isInBathroom = isInBathroom;
-    }
-    public Boolean getIsLate() {
-        return isLate;
-    }
-
-    public void setIsLate(Boolean isLate) {
-        this.isLate = isLate;
+    public void setWhiteboardName(String whiteboardName) {
+        this.whiteboardName = whiteboardName;
     }
 
     @Override
@@ -74,9 +56,7 @@ public class WhiteboardDTO implements Serializable {
     public String toString() {
         return "WhiteboardDTO{" +
             "id=" + id +
-            ", currentStatus='" + currentStatus + "'" +
-            ", isInBathroom='" + isInBathroom + "'" +
-            ", isLate='" + isLate + "'" +
+            ", whiteboardName='" + whiteboardName + "'" +
             '}';
     }
 }

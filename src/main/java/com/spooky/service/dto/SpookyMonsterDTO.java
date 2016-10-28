@@ -18,6 +18,12 @@ public class SpookyMonsterDTO implements Serializable {
 
     private MonsterType monsterType;
 
+    private String currentStatus;
+
+    private Boolean isInBathroom;
+
+    private Boolean isLate;
+
 
     private Long whiteboardId;
     
@@ -41,6 +47,27 @@ public class SpookyMonsterDTO implements Serializable {
 
     public void setMonsterType(MonsterType monsterType) {
         this.monsterType = monsterType;
+    }
+    public String getCurrentStatus() {
+        return currentStatus;
+    }
+
+    public void setCurrentStatus(String currentStatus) {
+        this.currentStatus = currentStatus;
+    }
+    public Boolean getIsInBathroom() {
+        return isInBathroom;
+    }
+
+    public void setIsInBathroom(Boolean isInBathroom) {
+        this.isInBathroom = isInBathroom;
+    }
+    public Boolean getIsLate() {
+        return isLate;
+    }
+
+    public void setIsLate(Boolean isLate) {
+        this.isLate = isLate;
     }
 
     public Long getWhiteboardId() {
@@ -78,6 +105,9 @@ public class SpookyMonsterDTO implements Serializable {
             "id=" + id +
             ", monsterName='" + monsterName + "'" +
             ", monsterType='" + monsterType + "'" +
+            ", currentStatus='" + currentStatus + "'" +
+            ", isInBathroom='" + isInBathroom + "'" +
+            ", isLate='" + isLate + "'" +
             '}';
     }
 }

@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('savickApp')
+        .module('spookywhiteboardApp')
         .controller('SpookyMonsterDetailController', SpookyMonsterDetailController);
 
     SpookyMonsterDetailController.$inject = ['$scope', '$rootScope', '$stateParams', 'previousState', 'entity', 'SpookyMonster', 'Whiteboard'];
@@ -13,7 +13,7 @@
         vm.spookyMonster = entity;
         vm.previousState = previousState.name;
 
-        var unsubscribe = $rootScope.$on('savickApp:spookyMonsterUpdate', function(event, result) {
+        var unsubscribe = $rootScope.$on('spookywhiteboardApp:spookyMonsterUpdate', function(event, result) {
             vm.spookyMonster = result;
         });
         $scope.$on('$destroy', unsubscribe);

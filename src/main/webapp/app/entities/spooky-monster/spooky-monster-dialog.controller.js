@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('savickApp')
+        .module('spookywhiteboardApp')
         .controller('SpookyMonsterDialogController', SpookyMonsterDialogController);
 
     SpookyMonsterDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', 'entity', 'SpookyMonster', 'Whiteboard'];
@@ -33,7 +33,7 @@
         }
 
         function onSaveSuccess (result) {
-            $scope.$emit('savickApp:spookyMonsterUpdate', result);
+            $scope.$emit('spookywhiteboardApp:spookyMonsterUpdate', result);
             $uibModalInstance.close(result);
             vm.isSaving = false;
         }

@@ -13,8 +13,8 @@ public class HeaderUtil {
 
     public static HttpHeaders createAlert(String message, String param) {
         HttpHeaders headers = new HttpHeaders();
-        headers.add("X-savickApp-alert", message);
-        headers.add("X-savickApp-params", param);
+        headers.add("X-spookywhiteboardApp-alert", message);
+        headers.add("X-spookywhiteboardApp-params", param);
         return headers;
     }
 
@@ -33,8 +33,8 @@ public class HeaderUtil {
     public static HttpHeaders createFailureAlert(String entityName, String errorKey, String defaultMessage) {
         log.error("Entity creation failed, {}", defaultMessage);
         HttpHeaders headers = new HttpHeaders();
-        headers.add("X-savickApp-error", defaultMessage);
-        headers.add("X-savickApp-params", entityName);
+        headers.add("X-spookywhiteboardApp-error", defaultMessage);
+        headers.add("X-spookywhiteboardApp-params", entityName);
         return headers;
     }
 }

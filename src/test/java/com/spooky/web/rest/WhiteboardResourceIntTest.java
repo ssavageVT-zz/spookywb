@@ -1,6 +1,6 @@
 package com.spooky.web.rest;
 
-import com.spooky.SavickApp;
+import com.spooky.SpookywhiteboardApp;
 
 import com.spooky.domain.Whiteboard;
 import com.spooky.repository.WhiteboardRepository;
@@ -38,17 +38,11 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  */
 @RunWith(SpringRunner.class)
 
-@SpringBootTest(classes = SavickApp.class)
+@SpringBootTest(classes = SpookywhiteboardApp.class)
 
 public class WhiteboardResourceIntTest {
-    private static final String DEFAULT_CURRENT_STATUS = "AAAAA";
-    private static final String UPDATED_CURRENT_STATUS = "BBBBB";
-
-    private static final Boolean DEFAULT_IS_IN_BATHROOM = false;
-    private static final Boolean UPDATED_IS_IN_BATHROOM = true;
-
-    private static final Boolean DEFAULT_IS_LATE = false;
-    private static final Boolean UPDATED_IS_LATE = true;
+    private static final String DEFAULT_WHITEBOARD_NAME = "AAAAA";
+    private static final String UPDATED_WHITEBOARD_NAME = "BBBBB";
 
     @Inject
     private WhiteboardRepository whiteboardRepository;
@@ -88,9 +82,7 @@ public class WhiteboardResourceIntTest {
      */
     public static Whiteboard createEntity(EntityManager em) {
         Whiteboard whiteboard = new Whiteboard()
-                .currentStatus(DEFAULT_CURRENT_STATUS)
-                .isInBathroom(DEFAULT_IS_IN_BATHROOM)
-                .isLate(DEFAULT_IS_LATE);
+                .whiteboardName(DEFAULT_WHITEBOARD_NAME);
         return whiteboard;
     }
 
@@ -116,9 +108,7 @@ public class WhiteboardResourceIntTest {
         List<Whiteboard> whiteboards = whiteboardRepository.findAll();
         assertThat(whiteboards).hasSize(databaseSizeBeforeCreate + 1);
         Whiteboard testWhiteboard = whiteboards.get(whiteboards.size() - 1);
-        assertThat(testWhiteboard.getCurrentStatus()).isEqualTo(DEFAULT_CURRENT_STATUS);
-        assertThat(testWhiteboard.isIsInBathroom()).isEqualTo(DEFAULT_IS_IN_BATHROOM);
-        assertThat(testWhiteboard.isIsLate()).isEqualTo(DEFAULT_IS_LATE);
+        assertThat(testWhiteboard.getWhiteboardName()).isEqualTo(DEFAULT_WHITEBOARD_NAME);
     }
 
     @Test
@@ -132,9 +122,7 @@ public class WhiteboardResourceIntTest {
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
                 .andExpect(jsonPath("$.[*].id").value(hasItem(whiteboard.getId().intValue())))
-                .andExpect(jsonPath("$.[*].currentStatus").value(hasItem(DEFAULT_CURRENT_STATUS.toString())))
-                .andExpect(jsonPath("$.[*].isInBathroom").value(hasItem(DEFAULT_IS_IN_BATHROOM.booleanValue())))
-                .andExpect(jsonPath("$.[*].isLate").value(hasItem(DEFAULT_IS_LATE.booleanValue())));
+                .andExpect(jsonPath("$.[*].whiteboardName").value(hasItem(DEFAULT_WHITEBOARD_NAME.toString())));
     }
 
     @Test
@@ -148,9 +136,7 @@ public class WhiteboardResourceIntTest {
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
             .andExpect(jsonPath("$.id").value(whiteboard.getId().intValue()))
-            .andExpect(jsonPath("$.currentStatus").value(DEFAULT_CURRENT_STATUS.toString()))
-            .andExpect(jsonPath("$.isInBathroom").value(DEFAULT_IS_IN_BATHROOM.booleanValue()))
-            .andExpect(jsonPath("$.isLate").value(DEFAULT_IS_LATE.booleanValue()));
+            .andExpect(jsonPath("$.whiteboardName").value(DEFAULT_WHITEBOARD_NAME.toString()));
     }
 
     @Test
@@ -171,9 +157,7 @@ public class WhiteboardResourceIntTest {
         // Update the whiteboard
         Whiteboard updatedWhiteboard = whiteboardRepository.findOne(whiteboard.getId());
         updatedWhiteboard
-                .currentStatus(UPDATED_CURRENT_STATUS)
-                .isInBathroom(UPDATED_IS_IN_BATHROOM)
-                .isLate(UPDATED_IS_LATE);
+                .whiteboardName(UPDATED_WHITEBOARD_NAME);
         WhiteboardDTO whiteboardDTO = whiteboardMapper.whiteboardToWhiteboardDTO(updatedWhiteboard);
 
         restWhiteboardMockMvc.perform(put("/api/whiteboards")
@@ -185,9 +169,7 @@ public class WhiteboardResourceIntTest {
         List<Whiteboard> whiteboards = whiteboardRepository.findAll();
         assertThat(whiteboards).hasSize(databaseSizeBeforeUpdate);
         Whiteboard testWhiteboard = whiteboards.get(whiteboards.size() - 1);
-        assertThat(testWhiteboard.getCurrentStatus()).isEqualTo(UPDATED_CURRENT_STATUS);
-        assertThat(testWhiteboard.isIsInBathroom()).isEqualTo(UPDATED_IS_IN_BATHROOM);
-        assertThat(testWhiteboard.isIsLate()).isEqualTo(UPDATED_IS_LATE);
+        assertThat(testWhiteboard.getWhiteboardName()).isEqualTo(UPDATED_WHITEBOARD_NAME);
     }
 
     @Test

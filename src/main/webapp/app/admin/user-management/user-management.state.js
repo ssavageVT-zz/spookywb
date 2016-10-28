@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('savickApp')
+        .module('spookywhiteboardApp')
         .config(stateConfig);
 
     stateConfig.$inject = ['$stateProvider'];
@@ -47,7 +47,7 @@
             url: '/user/:login',
             data: {
                 authorities: ['ROLE_ADMIN'],
-                pageTitle: 'savick'
+                pageTitle: 'spookywhiteboard'
             },
             views: {
                 'content@': {

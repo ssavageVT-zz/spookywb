@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('savickApp')
+        .module('spookywhiteboardApp')
         .factory('notificationInterceptor', notificationInterceptor);
 
     notificationInterceptor.$inject = ['$q', 'AlertService'];
@@ -15,9 +15,9 @@
         return service;
 
         function response (response) {
-            var alertKey = response.headers('X-savickApp-alert');
+            var alertKey = response.headers('X-spookywhiteboardApp-alert');
             if (angular.isString(alertKey)) {
-                AlertService.success(alertKey, { param : response.headers('X-savickApp-params')});
+                AlertService.success(alertKey, { param : response.headers('X-spookywhiteboardApp-params')});
             }
             return response;
         }

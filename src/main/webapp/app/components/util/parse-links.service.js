@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('savickApp')
+        .module('spookywhiteboardApp')
         .factory('ParseLinks', ParseLinks);
 
     function ParseLinks () {

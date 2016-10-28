@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('savickApp')
+        .module('spookywhiteboardApp')
         .controller('SpookyMonsterController', SpookyMonsterController);
 
     SpookyMonsterController.$inject = ['$scope', '$state', 'SpookyMonster', 'ParseLinks', 'AlertService'];

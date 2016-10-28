@@ -12,12 +12,12 @@
 
 spring:
     application:
-        name: savick
+        name: spookywhiteboard
     jackson:
         serialization.write_dates_as_timestamps: false
     datasource:
         type: com.zaxxer.hikari.HikariDataSource
-        url: jdbc:h2:mem:savick;DB_CLOSE_DELAY=-1
+        url: jdbc:h2:mem:spookywhiteboard;DB_CLOSE_DELAY=-1
         name:
         username:
         password:
@@ -66,12 +66,12 @@ jhipster:
     security:
         rememberMe:
             # security key (this key should be unique for your application, and kept secret)
-            key: 8a67f2cd16fce4286b0ed5615b9c10a974a0fdb3
+            key: adefc21db4826f340874647612f77e466f774456
     metrics: # DropWizard Metrics configuration, used by MetricsConfiguration
         jmx.enabled: true
     swagger:
-        title: savick API
-        description: savick API documentation
+        title: spookywhiteboard API
+        description: spookywhiteboard API documentation
         version: 0.0.1
         termsOfServiceUrl:
         contactName:

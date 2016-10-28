@@ -11,7 +11,7 @@
     };
 
     angular
-        .module('savickApp')
+        .module('spookywhiteboardApp')
         .component('jhiAlertError', jhiAlertError);
 
     jhiAlertErrorController.$inject = ['$scope', 'AlertService', '$rootScope'];
@@ -36,7 +36,7 @@
             );
         }
 
-        var cleanHttpErrorListener = $rootScope.$on('savickApp.httpError', function (event, httpResponse) {
+        var cleanHttpErrorListener = $rootScope.$on('spookywhiteboardApp.httpError', function (event, httpResponse) {
             var i;
             event.stopPropagation();
             switch (httpResponse.status) {
@@ -46,8 +46,8 @@
                 break;
 
             case 400:
-                var errorHeader = httpResponse.headers('X-savickApp-error');
-                var entityKey = httpResponse.headers('X-savickApp-params');
+                var errorHeader = httpResponse.headers('X-spookywhiteboardApp-error');
+                var entityKey = httpResponse.headers('X-spookywhiteboardApp-params');
                 if (errorHeader) {
                     var entityName = entityKey;
                     addErrorAlert(errorHeader, errorHeader, {entityName: entityName});

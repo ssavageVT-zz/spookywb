@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('savickApp')
+        .module('spookywhiteboardApp')
         .controller('WhiteboardController', WhiteboardController);
 
     WhiteboardController.$inject = ['$scope', '$state', 'Whiteboard'];

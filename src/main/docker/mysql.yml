@@ -1,14 +1,14 @@
 version: '2'
 services:
-    savick-mysql:
-        container_name: savick-mysql
+    spookywhiteboard-mysql:
+        container_name: spookywhiteboard-mysql
         image: mysql:5.7.15
         # volumes:
-        #     - ~/volumes/jhipster/savick/mysql/:/var/lib/mysql/
+        #     - ~/volumes/jhipster/spookywhiteboard/mysql/:/var/lib/mysql/
         environment:
             - MYSQL_USER=root
             - MYSQL_ALLOW_EMPTY_PASSWORD=yes
-            - MYSQL_DATABASE=savick
+            - MYSQL_DATABASE=spookywhiteboard
         ports:
             - 3306:3306
         command: mysqld --lower_case_table_names=1 --skip-ssl

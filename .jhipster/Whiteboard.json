@@ -10,19 +10,11 @@
     ],
     "fields": [
         {
-            "fieldName": "currentStatus",
+            "fieldName": "whiteboardName",
             "fieldType": "String"
-        },
-        {
-            "fieldName": "isInBathroom",
-            "fieldType": "Boolean"
-        },
-        {
-            "fieldName": "isLate",
-            "fieldType": "Boolean"
         }
     ],
-    "changelogDate": "20161028152602",
+    "changelogDate": "20161028155014",
     "entityTableName": "whiteboard",
     "dto": "mapstruct",
     "pagination": "no",

@@ -21,9 +21,9 @@ spring:
         serialization.indent_output: true
     datasource:
         type: com.zaxxer.hikari.HikariDataSource
-        url: jdbc:h2:file:./target/h2db/db/savick;DB_CLOSE_DELAY=-1
+        url: jdbc:h2:file:./target/h2db/db/spookywhiteboard;DB_CLOSE_DELAY=-1
         name:
-        username: savick
+        username: spookywhiteboard
         password:
     h2:
         console:
@@ -60,9 +60,9 @@ jhipster:
     security:
         rememberMe:
             # security key (this key should be unique for your application, and kept secret)
-            key: 8a67f2cd16fce4286b0ed5615b9c10a974a0fdb3
+            key: adefc21db4826f340874647612f77e466f774456
     mail: # specific JHipster mail property, for standard properties see MailProperties
-        from: savick@localhost
+        from: spookywhiteboard@localhost
     metrics: # DropWizard Metrics configuration, used by MetricsConfiguration
         jmx.enabled: true
         spark:
@@ -73,7 +73,7 @@ jhipster:
             enabled: false
             host: localhost
             port: 2003
-            prefix: savick
+            prefix: spookywhiteboard
         logs: # Reports Dropwizard metrics in the logs
             enabled: false
             reportFrequency: 60 # in seconds

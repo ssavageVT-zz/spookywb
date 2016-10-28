@@ -1,6 +1,6 @@
 package com.spooky.service;
 
-import com.spooky.SavickApp;
+import com.spooky.SpookywhiteboardApp;
 import com.spooky.domain.PersistentToken;
 import com.spooky.domain.User;
 import com.spooky.repository.PersistentTokenRepository;
@@ -26,7 +26,7 @@ import static org.assertj.core.api.Assertions.*;
  * @see UserService
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = SavickApp.class)
+@SpringBootTest(classes = SpookywhiteboardApp.class)
 @Transactional
 public class UserServiceIntTest {
 

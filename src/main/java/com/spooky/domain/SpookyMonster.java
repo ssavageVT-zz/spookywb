@@ -27,6 +27,15 @@ public class SpookyMonster implements Serializable {
     @Column(name = "monster_type")
     private MonsterType monsterType;
 
+    @Column(name = "current_status")
+    private String currentStatus;
+
+    @Column(name = "is_in_bathroom")
+    private Boolean isInBathroom;
+
+    @Column(name = "is_late")
+    private Boolean isLate;
+
     @ManyToOne
     private Whiteboard whiteboard;
 
@@ -62,6 +71,45 @@ public class SpookyMonster implements Serializable {
 
     public void setMonsterType(MonsterType monsterType) {
         this.monsterType = monsterType;
+    }
+
+    public String getCurrentStatus() {
+        return currentStatus;
+    }
+
+    public SpookyMonster currentStatus(String currentStatus) {
+        this.currentStatus = currentStatus;
+        return this;
+    }
+
+    public void setCurrentStatus(String currentStatus) {
+        this.currentStatus = currentStatus;
+    }
+
+    public Boolean isIsInBathroom() {
+        return isInBathroom;
+    }
+
+    public SpookyMonster isInBathroom(Boolean isInBathroom) {
+        this.isInBathroom = isInBathroom;
+        return this;
+    }
+
+    public void setIsInBathroom(Boolean isInBathroom) {
+        this.isInBathroom = isInBathroom;
+    }
+
+    public Boolean isIsLate() {
+        return isLate;
+    }
+
+    public SpookyMonster isLate(Boolean isLate) {
+        this.isLate = isLate;
+        return this;
+    }
+
+    public void setIsLate(Boolean isLate) {
+        this.isLate = isLate;
     }
 
     public Whiteboard getWhiteboard() {
@@ -103,6 +151,9 @@ public class SpookyMonster implements Serializable {
             "id=" + id +
             ", monsterName='" + monsterName + "'" +
             ", monsterType='" + monsterType + "'" +
+            ", currentStatus='" + currentStatus + "'" +
+            ", isInBathroom='" + isInBathroom + "'" +
+            ", isLate='" + isLate + "'" +
             '}';
     }
 }

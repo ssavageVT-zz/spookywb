@@ -16,6 +16,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import javax.inject.Inject;
@@ -29,12 +30,13 @@ import java.util.stream.Collectors;
 /**
  * REST controller for managing SpookyMonster.
  */
+@PreAuthorize("permitAll()")
 @RestController
 @RequestMapping("/api")
 public class SpookyMonsterResource {
 
     private final Logger log = LoggerFactory.getLogger(SpookyMonsterResource.class);
-        
+
     @Inject
     private SpookyMonsterRepository spookyMonsterRepository;
 
@@ -102,6 +104,7 @@ public class SpookyMonsterResource {
         method = RequestMethod.GET,
         produces = MediaType.APPLICATION_JSON_VALUE)
     @Timed
+    @PreAuthorize("permitAll()")
     public ResponseEntity<List<SpookyMonsterDTO>> getAllSpookyMonsters(Pageable pageable)
         throws URISyntaxException {
         log.debug("REST request to get a page of SpookyMonsters");

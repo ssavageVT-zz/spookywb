@@ -5,9 +5,9 @@
         .module('spookywhiteboardApp')
         .controller('HomeController', HomeController);
 
-    HomeController.$inject = ['$scope', 'Principal', 'LoginService', '$state'];
+    HomeController.$inject = ['$scope', 'Principal', 'LoginService', '$state', 'SpookyMonster'];
 
-    function HomeController ($scope, Principal, LoginService, $state) {
+    function HomeController ($scope, Principal, LoginService, $state, SpookyMonster) {
         var vm = this;
 
         vm.account = null;

@@ -4,10 +4,6 @@ body {
     color: #333;
 }
 
-@font-face {
-    font-family: 'Halls';
-    src: url('content/Halls.ttf') format('truetype');
-}
 
 /* ==========================================================================
 Hide ng-cloak on page load, https://docs.angularjs.org/api/ng/directive/ngCloak
@@ -17,7 +13,11 @@ Hide ng-cloak on page load, https://docs.angularjs.org/api/ng/directive/ngCloak
 }
 
 .whiteboard-header {
-    font-family: "Halls";
+    font-family: 'Creepster', cursive;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 2px;
+    text-align: center;
 }
 
 .whiteboard .row  {
@@ -37,6 +37,39 @@ Hide ng-cloak on page load, https://docs.angularjs.org/api/ng/directive/ngCloak
     padding: 15px;
     background-color: #fff;
     border-radius: 5px;
+}
+
+.monster-header {
+
+    border-bottom: solid 1px #bbb;
+}
+
+.monster-name {
+    font-family: 'Butcherman', cursive;
+    text-transform: uppercase;
+    padding: 10px 0;
+    font-size: 24px;
+    margin-left: 62px;
+}
+
+.monster-pic {
+    float: left;
+    width: 48px;
+}
+
+.monster-pic img {
+    max-width: 48px;
+}
+
+.current-status {
+    border-bottom: solid 1px #bbb;
+    margin-bottom: 5px;
+    padding: 25px 0;
+    text-align: center;
+}
+
+.special-status {
+
 }
 
 /* ==========================================================================

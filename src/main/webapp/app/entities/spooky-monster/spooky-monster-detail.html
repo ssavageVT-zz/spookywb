@@ -1,0 +1,31 @@
+
+<div>
+    <h2><span>Spooky Monster</span> {{vm.spookyMonster.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span>Monster Name</span></dt>
+        <dd>
+            <span>{{vm.spookyMonster.monsterName}}</span>
+        </dd>
+        <dt><span>Monster Type</span></dt>
+        <dd>
+            <span>{{vm.spookyMonster.monsterType}}</span>
+        </dd>
+        <dt><span>Whiteboard</span></dt>
+        <dd>
+            <a ui-sref="whiteboard-detail({id:vm.spookyMonster.whiteboardId})">{{vm.spookyMonster.whiteboardId}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="spooky-monster-detail.edit({id:vm.spookyMonster.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm"> Edit</span>
+    </button>
+</div>

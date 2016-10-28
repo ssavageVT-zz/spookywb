@@ -1,0 +1,31 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "spookyMonster",
+            "otherEntityName": "spookyMonster",
+            "otherEntityRelationshipName": "whiteboard"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "currentStatus",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "isInBathroom",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "isLate",
+            "fieldType": "Boolean"
+        }
+    ],
+    "changelogDate": "20161028152602",
+    "entityTableName": "whiteboard",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "no",
+    "angularSuffix": "mySuffix"
+}

@@ -1,0 +1,31 @@
+
+<div>
+    <h2><span>Whiteboard</span> {{vm.whiteboard.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span>Current Status</span></dt>
+        <dd>
+            <span>{{vm.whiteboard.currentStatus}}</span>
+        </dd>
+        <dt><span>Is In Bathroom</span></dt>
+        <dd>
+            <span>{{vm.whiteboard.isInBathroom}}</span>
+        </dd>
+        <dt><span>Is Late</span></dt>
+        <dd>
+            <span>{{vm.whiteboard.isLate}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="whiteboard-detail.edit({id:vm.whiteboard.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm"> Edit</span>
+    </button>
+</div>

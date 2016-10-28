@@ -1,0 +1,28 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "whiteboard",
+            "otherEntityName": "whiteboard",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "monsterName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "monsterType",
+            "fieldType": "MonsterType",
+            "fieldValues": "GHOST,GOBLIN,ZOMBIE,VAMPIRE,SKELLINGTON"
+        }
+    ],
+    "changelogDate": "20161028152603",
+    "entityTableName": "spooky_monster",
+    "dto": "mapstruct",
+    "pagination": "infinite-scroll",
+    "service": "no",
+    "angularSuffix": "mySuffix"
+}

@@ -1,0 +1,60 @@
+<div>
+    <h2>Whiteboards</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="whiteboard.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span >
+                        Create new Whiteboard
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span>ID</span></th>
+                    <th><span>Current Status</span></th>
+                    <th><span>Is In Bathroom</span></th>
+                    <th><span>Is Late</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="whiteboard in vm.whiteboards track by whiteboard.id">
+                    <td><a ui-sref="whiteboard-detail({id:whiteboard.id})">{{whiteboard.id}}</a></td>
+                    <td>{{whiteboard.currentStatus}}</td>
+                    <td>{{whiteboard.isInBathroom}}</td>
+                    <td>{{whiteboard.isLate}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="whiteboard-detail({id:whiteboard.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="whiteboard.edit({id:whiteboard.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="whiteboard.delete({id:whiteboard.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -64,12 +64,18 @@ Hide ng-cloak on page load, https://docs.angularjs.org/api/ng/directive/ngCloak
 .current-status {
     border-bottom: solid 1px #bbb;
     margin-bottom: 5px;
-    padding: 25px 0;
+    padding: 32px 0;
     text-align: center;
 }
 
-.special-status {
+.special-status img {
+    width: 24px;
+    float: left;
+    margin-right: 5px;
+}
 
+.hide {
+    display: none;
 }
 
 /* ==========================================================================
